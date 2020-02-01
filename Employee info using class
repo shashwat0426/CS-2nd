@@ -1,0 +1,46 @@
+
+#include<iostream>
+
+using namespace std;
+class employee  {
+int batch;
+char name[30];
+char department[30];
+public:
+    void getdata(void);
+    void display(void);
+} a[100];
+
+void employee::getdata(void)
+{
+    cout<<"enter name";
+    cin>> name;
+    cout<<"enter batch number";
+    cin>> batch;
+    cout<<"enter department";
+    cin>> department;
+}
+
+void employee::display(void)
+{
+    cout<<"\n name"<< name;
+    cout<<"\n batch"<< batch;
+    cout<<"\n department"<< department;
+}
+
+ int main()
+ {
+     int i=0;
+     cout<<"enter the total number of employee";
+     cin>>n;
+    employee a[n];
+    for(i=0;i<n;i++)
+    {
+        a[i].getdata();
+    }
+    for(i=0;i<n;i++)
+    {
+        a[i].display();
+    }
+    return 0;
+ }
